@@ -20,6 +20,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SchoolManagementSystem.Domain", "SchoolManagementSystem.Domain", "{5A102A13-A229-4508-BFDF-F9C20BB8DF4E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{FA52E9FF-76F9-4E6C-B92A-2D2AE85CCF59}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\School-Management-System\School-Management-System\SchoolManagementSystem\SchoolManagementSystem\Models\Students.cs = ..\..\School-Management-System\School-Management-System\SchoolManagementSystem\SchoolManagementSystem\Models\Students.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enums", "Enums", "{107791D5-3F87-4DB7-9288-8EED252207C9}"
 EndProject
