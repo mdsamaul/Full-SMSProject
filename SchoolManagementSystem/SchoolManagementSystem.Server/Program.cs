@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("AppCon");
-builder.Services.AddDbContext<SchoolDbContext>(options => // DbContext এর সঠিক নাম ব্যবহার করুন
+builder.Services.AddDbContext<SchoolDbContext>(options =>
     options.UseSqlServer(connectionString,
         b => b.MigrationsAssembly(typeof(SchoolDbContext).Assembly.FullName)));
 builder.Services.AddControllers();
