@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SchoolManagementSystem.Domain.Entities
 {
-    internal class TeacherClasses
+    public class TeacherClasses
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TeacherClasseId { get; set; }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SchoolManagementSystem.Domain.Entities
 {
-    internal class Admins : Users
+    public class Admins : Users
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int AdminId { get; set; }

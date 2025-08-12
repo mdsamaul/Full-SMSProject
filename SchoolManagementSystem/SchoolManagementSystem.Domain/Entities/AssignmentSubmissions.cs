@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SchoolManagementSystem.Domain.Entities
 {
-    internal class AssignmentSubmissions
+    public class AssignmentSubmissions
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int AssignmentSubmissionId { get; set; }
