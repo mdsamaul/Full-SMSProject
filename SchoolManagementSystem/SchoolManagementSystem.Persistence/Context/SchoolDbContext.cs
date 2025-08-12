@@ -139,7 +139,35 @@ namespace SchoolManagementSystem.Persistence.Context
                 .WithMany(t => t.classSchedule)
                 .HasForeignKey(cs => cs.TeacherId)
                 .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<TeacherClasses>()
+    .HasOne(tc => tc.Classes)
+    .WithMany(c => c.teacherClasses)
+    .HasForeignKey(tc => tc.ClassId)
+    .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<TeacherClasses>()
+                .HasOne(tc => tc.Subjects)
+                .WithMany(s => s.teacherClasses)
+                .HasForeignKey(tc => tc.SubjectId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<TeacherClasses>()
+                .HasOne(tc => tc.Teachers)
+                .WithMany(t => t.teacherClasses)
+                .HasForeignKey(tc => tc.TeacherId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<AssignmentSubmissions>()
+    .HasOne(asub => asub.Assignments)
+    .WithMany(a => a.assignmentSubmissions)
+    .HasForeignKey(asub => asub.AssignmentId)
+    .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<AssignmentSubmissions>()
+                .HasOne(asub => asub.Students)
+                .WithMany(s => s.assignmentSubmissions)
+                .HasForeignKey(asub => asub.SId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
